@@ -3,28 +3,14 @@ import './App.css';
 import ChildComponent from './components/ChildComponent';
 
 function App() {
-  const [users, setUsers] = useState([])
-
-  //sử dụng useCallback
-  const getData = useCallback((type) => {
-    return fetch(`https://reqres.in/api/${type}`)
-  }, [])
-
-  const handleClick = () => {
-    getData('users')
-      .then((res) => res.json())
-      .then((res) => {
-        const users = res.data
-        setUsers(users)
-      })
-  }
+  const [count, setCount] = useState(0)
+  const [name, setName] = useState('David')
 
   return (
     <>
-      <p>Data:</p>
-      <button onClick={handleClick}>Get Users Data</button>
-      <p>{JSON.stringify(users)}</p>
-      <ChildComponent getData={getData} />
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Add</button>
+      <ChildComponent name={name} />
     </>
   );
 }

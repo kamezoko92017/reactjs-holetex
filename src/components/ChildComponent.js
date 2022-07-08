@@ -1,25 +1,12 @@
 import React, { useEffect, useState } from 'react'
 
-function ChildComponent({ getData }) {
-    const [comments, setComments] = useState([])
-
-    useEffect(() => {
-        console.log('Child component - useEffect - getData')
-
-        getData('comments')
-            .then((res) => res.json())
-            .then((res) => {
-                const comments = res.data
-                setComments(comments)
-            })
-    }, [getData])
-
+function ChildComponent() {
+    console.log('Child component - render')
     return (
         <>
             <p>Child component</p>
-            <p>{JSON.stringify(comments)}</p>
         </>
     )
 }
 
-export default ChildComponent
+export default React.memo(ChildComponent)

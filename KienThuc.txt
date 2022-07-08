@@ -41,3 +41,14 @@ useCallback để tránh việc này.
 - Khi sử dụng useCallback:
 thì dù có nhấn button 'Get Users Data' thì function 'getData('comments')' trong 
 useEffect cũng không được chạy lại
+
+
+-------React.memo() vs React.useMemo ??? - React Hooks (2021)--------------
+
+- Trong React nguyên tắc: khi component cha bị rerender thì component con cũng
+bị rerender
+- Để tránh việc này, sử dụng React.memo() để bọc component con như sau:
+     React.memo(ChildComponent)
+Lúc này, mỗi khi nhấn Add thì ChildComponent không bị rerender
+- Nếu truyền props kiểu tham trị {name} từ component cha sang con thì sử dụng
+React.memo() sẽ giúp component con ko bị rerender
