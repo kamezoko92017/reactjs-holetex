@@ -1,4 +1,4 @@
-USEEFFECT
+-----------------------useEffect--------------------------------
 1. Hoạt động của useEffect
 
 - function useEffect() sẽ được thực thi mỗi khi có bất kỳ state này thay đổi
@@ -17,3 +17,9 @@ USEEFFECT
 sẽ hoạt động như componentWillUnmout, Thường sử dụng để dọn dẹp rác
 - khi state thay đổi, hàm trong return sẽ được thực thi trước sau đó mới đến
 code trong useEffect thực thi
+
+-----------------------useMemo--------------------------------
+
+- Khi chưa sử dụng memo: trong file ExampleFunctional.js
+function expensiveFunction() sẽ bị rerender mỗi khi nhấn nút Add, điều này ko tốt
+cho perfomance
