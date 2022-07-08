@@ -60,3 +60,21 @@ bọc ngoài function muốn truyền.
 để  tránh điều này, thì đối với 1 số trường hợp không nên dùng memo(); thay vào đó
 là tách các component như ví dụ tạo NewComponent
 
+--------------Học useReducer - React Hooks (2021)----------------------
+
+1. một số khái niệm cơ bản:
+- ACTION: 'add-new-item'
+
+- VIEW: là UI, khi user nhấn button thì hàm xử lý sự kiện gọi 
+dispatch bắn ra 1 action ví dụ: dispatch('add-new-item')
+
+- REDUCERS (state, action) => {
+    switch (action) {
+        case: 'add-new-item':
+            return ...
+        case: 'abc':
+        ......
+    }
+}
+
+2. Khi có nhiều state hoặc việc xử lý state phức tạp thì dùng useReducer
