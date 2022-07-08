@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 
 function expensiveFunction(number) {
     console.log('Bat dau ')
@@ -13,7 +13,9 @@ function expensiveFunction(number) {
 export default function ExampleFunctional() {
     const [count, setCount] = useState(0);
 
-    const number = expensiveFunction(10)
+    const number = useMemo(() => {
+        return expensiveFunction(10)
+    }, [])
 
     return (
         <div>

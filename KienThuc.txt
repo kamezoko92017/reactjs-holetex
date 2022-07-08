@@ -23,3 +23,9 @@ code trong useEffect thực thi
 - Khi chưa sử dụng memo: trong file ExampleFunctional.js
 function expensiveFunction() sẽ bị rerender mỗi khi nhấn nút Add, điều này ko tốt
 cho perfomance
+- Sử dụng useMemo:
+    const number = useMemo(() => {
+        return expensiveFunction(10)
+    }, [])
+thì hàm expensiveFunction(10) chỉ render 1 lần, sau đó mỗi khi click Add, nó ko bị
+render lại
