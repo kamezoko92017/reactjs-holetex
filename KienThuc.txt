@@ -54,4 +54,6 @@ Lúc này, mỗi khi nhấn Add thì ChildComponent không bị rerender
 React.memo() sẽ giúp component con ko bị rerender
 - Nhưng nếu truyền props dạng tham trị như function getData() thì dù có dùng
 React.memo() thì component con vẫn bị render
+- Muốn truyền props tham chiếu mà ko bị render component con thì dùng useCallback
+bọc ngoài function muốn truyền.
 

@@ -6,9 +6,9 @@ function App() {
   const [count, setCount] = useState(0)
   const [name, setName] = useState('David')
 
-  const getData = () => {
+  const getData = useCallback(() => {
 
-  }
+  }, [])
 
   return (
     <>
