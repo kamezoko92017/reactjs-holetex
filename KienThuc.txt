@@ -52,3 +52,6 @@ bị rerender
 Lúc này, mỗi khi nhấn Add thì ChildComponent không bị rerender
 - Nếu truyền props kiểu tham trị {name} từ component cha sang con thì sử dụng
 React.memo() sẽ giúp component con ko bị rerender
+- Nhưng nếu truyền props dạng tham trị như function getData() thì dù có dùng
+React.memo() thì component con vẫn bị render
+
