@@ -56,4 +56,7 @@ React.memo() sẽ giúp component con ko bị rerender
 React.memo() thì component con vẫn bị render
 - Muốn truyền props tham chiếu mà ko bị render component con thì dùng useCallback
 bọc ngoài function muốn truyền.
+- React.memo cũng giống các hook: useEffect, useMemo, useCallback là tốn bộ nhớ
+để  tránh điều này, thì đối với 1 số trường hợp không nên dùng memo(); thay vào đó
+là tách các component như ví dụ tạo NewComponent
 
