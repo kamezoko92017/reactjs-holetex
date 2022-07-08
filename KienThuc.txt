@@ -1,2 +1,19 @@
 USEEFFECT
+1. Hoạt động của useEffect
 
+- function useEffect() sẽ được thực thi mỗi khi có bất kỳ state này thay đổi
+- khi muốn chỉ state A thay đổi thì useEffect() mới thực thi thì sử dụng:
+    useEffect(callback,[A])
+- hoạt động giống componentDidMount và componentDidUpdate trong class component
+
+2. Sử dụng khi nào?
++ thực hiện gọi API
++ Thêm, xóa các event listeners ('click', 'scroll',...)
++ Thao tác DOM trực tiếp
++ Gọi Web APIs (setTimeout, setInterval,...)
+
+3. Lưu ý: 
+- return của useEffect có thể trả về 1 function, lúc này function này
+sẽ hoạt động như componentWillUnmout, Thường sử dụng để dọn dẹp rác
+- khi state thay đổi, hàm trong return sẽ được thực thi trước sau đó mới đến
+code trong useEffect thực thi
