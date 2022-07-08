@@ -38,3 +38,6 @@ trong file ChildComponent.js, ta có useEffect gán ngoại lệ [getData], khi 
 function 'getData('comments')' trong useEffect được chạy lại, nên ta thấy có thêm 
 request: comments gửi tới server. Điều này ko tốt về perfomance, ta cần dùng 
 useCallback để tránh việc này.
+- Khi sử dụng useCallback:
+thì dù có nhấn button 'Get Users Data' thì function 'getData('comments')' trong 
+useEffect cũng không được chạy lại
