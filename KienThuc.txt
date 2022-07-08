@@ -29,3 +29,12 @@ cho perfomance
     }, [])
 thì hàm expensiveFunction(10) chỉ render 1 lần, sau đó mỗi khi click Add, nó ko bị
 render lại
+
+-----------------------useCallback--------------------------------
+
+- Khi chưa sử dụng useCallback: 
+trong file ChildComponent.js, ta có useEffect gán ngoại lệ [getData], khi nhấn button
+'Get Users Data', function getData('users') được gọi làm getData() có thay đổi nên
+function 'getData('comments')' trong useEffect được chạy lại, nên ta thấy có thêm 
+request: comments gửi tới server. Điều này ko tốt về perfomance, ta cần dùng 
+useCallback để tránh việc này.
